@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">agINFRA SG Mobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_prova">Prova</string>
+    <string name="preference_file_key">it.infn.ct.aginfrasgmobile_preferences</string>
+    <string name="cookie"></string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="lbl1">Long Name: </string>
+    <string name="lbl2">Period: </string>
+    <string name="lbl3">Day: </string>
+    <string name="lbl4">Month: </string>
+    <string name="lbl5">Year: </string>
+    <string name="lbl6">file type: </string>
+    <string name="title_activity_products_details">ProductsDetails</string>
+    <string name="replicasBtn">Replicas</string>
+    <string name="relBtn">Relations</string>
+    <string name="title_activity_replicas">ReplicasActivity</string>
+    <string name="pref_gateway">Gateway</string>
+    <string name="pref_gateway_summary">Set the default gateway</string>
+    <string name="pref_app_setting">Application Settings</string>
+    <string name="pref_show_how_to_title">How To</string>
+    <string name="pref_show_how_to">Show "How To" information on next restart</string>
+    <string name="title_activity_filters">Apply filters</string>
+
+</resources>

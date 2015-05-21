@@ -1,0 +1,121 @@
+package it.infn.ct.aginfrasgmobile;
+
+import it.infn.ct.aginfrasgmobile.pojos.IDP;
+
+import java.util.ArrayList;
+
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.ListFragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class IDPsFragment extends ListFragment {
+
+	final static String ARG_POSITION = "position";
+	private IDP[] idps;
+	private ArrayList<String> origins;
+
+	int mCurrentPosition = -1;
+
+	private ArrayAdapter<String> mAdapter;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+
+		// layout diverso per terminali con versione inferiore alla 3
+		int layout = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ? android.R.layout.simple_list_item_activated_1
+				: android.R.layout.simple_list_item_1;
+
+		// Creo un array adapter con le federations
+
+		mAdapter = new ArrayAdapter<String>(
+				this.getActivity().getBaseContext(), layout);
+
+		setListAdapter(mAdapter);
+
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+
+		// Durante l'avvio, verifica se ci sono argomenti passati al fragment.
+		// Il metodo onStart è un buon posto per fare questo perchè possiamo
+		// essere sicuri che il layout è stato applicato al fragment e
+		// possiamo tranquillamente chiamare il metodo sotto che setta il
+		// testo dell'articolo
+		Bundle args = getArguments();
+		if (args != null) {
+			// Set IDP based on argument passed in Bundle
+			idps = (IDP[]) args.getSerializable(ARG_POSITION);// ,
+																// mCurrentPosition;
+
+			updateIdpsList(idps, mCurrentPosition);
+
+		} else if (mCurrentPosition != -1) {
+			// Set article based on saved instance state defined during
+			// onCreateView
+			getListView().setItemChecked(mCurrentPosition, true);
+			updateIdpsList(idps, mCurrentPosition);
+		}
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		if (savedInstanceState != null) {
+//			updateIdpsList((IDP[]) savedInstanceState.getSerializable("idps"),
+//					mCurrentPosition);
+			idps=(IDP[])savedInstanceState.getSerializable("idps");
+			mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
+			Log.d("IDP", "CIAO");
+		}
+		return super.onCreateView(inflater, container, savedInstanceState);
+	}
+
+	public void updateIdpsList(IDP[] idps, int position) {
+
+		this.idps = idps;
+		mCurrentPosition = position;
+		origins = new ArrayList<String>();
+		mAdapter.clear();
+		for (IDP idp : idps) {
+			mAdapter.add(idp.getDisplayName());
+			origins.add(idp.getOrigin());
+		}
+	}
+
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+		// Notifica all'Activity padre l'item selezionato
+		// mCallback.onIDPSelected(position);
+
+		// Toast.makeText(this.getActivity().getBaseContext(),
+		// origins.get(position), Toast.LENGTH_LONG).show();
+		Intent intent = new Intent(this.getActivity().getBaseContext(),
+				WebViewActivity.class);
+		intent.putExtra("URL", origins.get(position));
+		startActivity(intent);
+		// Setta l'item come check per essere evidenziato quando ci sono i due
+		// panel visibili.
+		getListView().setItemChecked(position, true);
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+
+		// salvo la selezione attiva nel caso debba ricreare il fragment
+		outState.putInt(ARG_POSITION, mCurrentPosition);
+		outState.putSerializable("idps", idps);
+	}
+
+}

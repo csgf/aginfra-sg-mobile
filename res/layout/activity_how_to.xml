@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".HowToActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/aginfra_sg_mobile" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Welcome to the agINFRA Science Gateway Mobile"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ScrollView
+                android:id="@+id/scrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2" 
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ViewSwitcher
+                        android:id="@+id/viewSwitcher1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/rLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="This app allows users to run on a mobile appliance the scientific applications contained in the Science Gateway of the agINFRA Project." />
+
+                            <RelativeLayout
+                                android:id="@+id/rLayout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView2" >
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="For more information on the agINFRA Science Gateway, tap on the icon below." />
+
+                                <ImageView
+                                    android:id="@+id/imEarthSG"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textView4"
+                                    android:layout_centerHorizontal="true"
+                                    android:clickable="true"
+                                    android:src="@drawable/aginfra_sg_40" />
+
+                                <!--
+                             >ImageButton
+                            android:id="@+id/imageButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView4"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/earthserver_sg_32" /
+                                -->
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rLayout3"
+                                android:layout_marginTop="10dp"
+                                android:text="For more information on the agINFRA project, visit:" />
+
+                            <ImageView
+                                android:id="@+id/imEarthPrj"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView5"
+                                android:layout_centerHorizontal="true"
+                                android:clickable="true"
+                                android:src="@drawable/aginfra_sg_40" />
+
+                            <!--
+                         ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView5"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/earthserver32" /
+                            -->
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="The access to the agINFRA Science Gateway requires federated credentials issued by an Identity Provider. If the organisation you belong to has an Identity Provider registered in an official Identity Federation, click on Sign In button below and select your federation and provider." />
+
+                            <ImageView
+                                android:id="@+id/imLogin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView3"
+                                android:layout_centerHorizontal="true"
+                                android:clickable="true"
+                                android:src="@drawable/login60" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imLogin"
+                                android:layout_marginTop="10dp"
+                                android:text="Otherwise, you can get federated credentials registering to the open Identity Provider which belongs to the GrIDP federation." />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView6"
+                                android:layout_centerHorizontal="true"
+                                android:clickable="true"
+                                android:src="@drawable/idpopen32" />
+                            <!--
+                         ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView5"
+                        android:layout_centerHorizontal="true" 
+                        android:src="@drawable/idpopen32"/
+                            -->
+                        </RelativeLayout>
+                    </ViewSwitcher>
+
+                    <Button
+                        android:id="@+id/button1"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/viewSwitcher1"
+                        android:text="Previous"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/viewSwitcher1"
+                        android:text="Next" />
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/howToChkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/howToChkBox"
+            android:layout_toLeftOf="@+id/howToChkBox"
+            android:text="Don&apos;t show welcome page again"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context=".ProductsDetails" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_folder" />
+
+    <RelativeLayout
+        android:id="@+id/rlBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/imageView1"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btnReplicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/replicasBtn" 
+            android:enabled="false"/>
+
+        <!-- Button
+            android:id="@+id/Button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnReplicas"
+            android:text="@string/relBtn" /-->
+        
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBtn"
+        android:paddingTop="10dp" >
+    </ListView>
+
+</RelativeLayout>

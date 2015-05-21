@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    PreferenceCategory android:title="@string/pref_user_profile" >
+        <EditTextPreference
+            android:key="prefUsername"
+            android:summary="@string/pref_user_name_summary"
+            android:title="@string/pref_user_name" />
+    </PreferenceCategory
+    -->
+    <PreferenceCategory 
+        android:title="@string/pref_app_setting" >
+
+        <CheckBoxPreference
+            android:key="show_welcome_page"
+            android:title="@string/pref_show_how_to_title"
+            android:summary="@string/pref_show_how_to" />
+        
+
+        <Preference
+            android:key="default_idp"
+            android:title="Default Identity Provider"
+            android:summary="Change your default Identity  Provider" 
+            android:enabled="false"/>
+            
+        <!-- ListPreference
+            android:entries="@array/gateways"
+            android:entryValues="@array/gatwaysURL"
+            android:key="pref_gateway"
+            android:summary="@string/pref_gateway_summary"
+            android:title="@string/pref_gateway" /-->
+    </PreferenceCategory>
+
+</PreferenceScreen>

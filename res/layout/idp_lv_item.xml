@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/idpCountryLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:id="@+id/idpFlagImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/idpTxtCountry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idpFlagImage"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtIDPName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/idpLogoImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2" />
+
+</LinearLayout>
