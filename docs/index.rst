@@ -12,17 +12,16 @@ About
 
 .. image:: images/aginfra.png
    :align: left
-   :scale: 80%
+   :scale: 75%
    :target: PLAY_
 
-**agINFRA SG Mobile** is a mobile application developed in the contest of `agINFRA project <PROJECT-URL_>`_ Android versions is available from `Google Play <PLAY_>`_. The main aim of this mobile app is to provide an easy way to access, from your mobile appliances, digital assets and its metadata stored in different kinds of storage:
+**agINFRA SG Mobile** is a mobile application developed in the contest of `agINFRA project <PROJECT-URL_>`_. The Android version is available from `Google Play <PLAY_>`_. The main aim of this mobile app is to provide an easy way to access, from your mobile appliances, digital assets and metadata stored in different kinds of storage:
 
 - Local storage
 - Grid storage
 - Cloud storage
 
-agINFRA SG Mobile currently provides access to the Soil Map data repository:
-
+The agINFRA SG Mobile currently provides access to the Soil Map data repository.
 
 ============
 Installation
