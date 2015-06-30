@@ -15,6 +15,8 @@ About
    :scale: 75%
    :target: PLAY_
 
+-------------
+
 **agINFRA SG Mobile** is a mobile application developed in the contest of `agINFRA project <PROJECT-URL_>`_. The Android version is available from `Google Play <PLAY_>`_. The main aim of this mobile app is to provide an easy way to access, from your mobile appliances, digital assets and metadata stored in different kinds of storage:
 
 - Local storage
@@ -52,7 +54,9 @@ Usage
 
 To use the agINFRA SG Mobile you need federated credentials issued by an Identity Provider. If the organisation you belong to has an Identity Provider, proceed with the download; otherwise, you can first get federated credentials registering to the `"open" Identity Provider <https://idpopen.garr.it/register>`_, which belongs to the GrIDP federation.
 
-Once the application is installed on you mobile device, you can access the repository using your federated credentials and selecting the organization you belong to and the Identity Provider (see Figure 1).
+Once the application is installed on you mobile device, you can access the repository using your federated credentials and selecting the organization you belong to and the Identity Provider (see `Figure 1`_).
+
+.. _Figure 1:
 
 .. figure:: images/IdP-list.png
    :align: center
@@ -60,9 +64,11 @@ Once the application is installed on you mobile device, you can access the repos
    :scale: 70%
    :figclass: text    
    
-   Figure 1. Identity Provider List
+   Identity Provider List
 
-If your credentials are correct, the application shows the main view from which you could access the repository, as the Figure 2 shows.
+If your credentials are correct, the application shows the main view from which you could access the repository, as the `Figure 2`_ shows.
+
+.. _Figure 2:
 
 .. figure:: images/repo.png
    :align: center
@@ -70,19 +76,21 @@ If your credentials are correct, the application shows the main view from which 
    :scale: 70%
    :figclass: text    
    
-   Figure 2. agINFRA Soil Map Repository
+   agINFRA Soil Map Repository
 
 Selecting the repository, the application shows a list of available digital assets (see Figure 3) from which you could select the digital object. The application provides also a hierarchical filter mechanism that allows you to easly retreive the asset and metadata you are looking for.
 
-The Figure 3 also shows the replica where the digital asset is available to download it on your device.
+The `Figure 3`_ also shows the replica where the digital asset is available to download it on your device.
+
+.. _Figure 3:
 
 .. figure:: images/asset-download.png
    :align: center
    :alt: ICCU POC
    :scale: 70%
    :figclass: text    
-   
-   Figure 3. Asset download
+
+   Asset download
 
 ============
 Contributors
